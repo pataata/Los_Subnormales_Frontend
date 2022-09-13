@@ -4,10 +4,10 @@
     "slug": "subnormales-front",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
+    "icon": "./assets/spaceicon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/splashspace.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
