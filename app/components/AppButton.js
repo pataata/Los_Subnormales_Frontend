@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
         marginVertical: 10,
     },
     text:{
-        color: colors.white,
+        color: colors.text,
         fontSize: 18,
         textTransform: "uppercase",
         fontWeight: "bold",

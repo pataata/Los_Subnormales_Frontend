@@ -7,6 +7,8 @@ export default{
     light: "#f8f4f4",
     danger: '#ff5252',
     dark: '#0c0c0c',
-    background: '#121212',
-    text: '#fff'
+    background: '#1E1E33',
+    background2: 'rgba(105, 134, 255, 0.61)',
+    text: '#fff',
+    text2: '#202020'
 }
