@@ -8,5 +8,6 @@ export default{
     danger: '#ff5252',
     dark: '#0c0c0c',
     background: '#121212',
-    text: '#fff'
+    text: '#fff',
+    espacial: '#6699FF'
 }
