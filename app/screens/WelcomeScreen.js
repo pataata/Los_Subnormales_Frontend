@@ -1,10 +1,9 @@
 import React from 'react';
 import {Text, View, ImageBackground, StyleSheet, Image } from 'react-native';
 import AppButton from '../components/AppButton';
-import AppBackground from '../components/AppBackground';
 import colors from '../config/colors';
 
-function WelcomeScreen(props) {
+function WelcomeScreen({ navigation }) {
     return (
         <View style={styles.background}>
             <View style={styles.logoContainer}>
@@ -12,7 +11,9 @@ function WelcomeScreen(props) {
                 <Text style={styles.tagline}>Titanic Espacial</Text>
             </View>
             <View style={styles.buttonsContainer}>
-                <AppButton title="Conoce tu Destino" />
+                <AppButton 
+                    title="Conoce tu Destino"
+                    onPress={() => navigation.navigate('MainScreen')}/>
                 
             </View>
 

@@ -1,11 +1,25 @@
-import React, { Component} from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import React, { useState } from "react";
+import MainScreen from './app/screens/MainScreen';
+import WelcomeScreen from './app/screens/WelcomeScreen';
 
-import WelcomeScreen from "./app/screens/WelcomeScreen";
+const Stack = createNativeStackNavigator();
 
 const App = () => {
-  
   return (
-    <WelcomeScreen/>
+    <NavigationContainer>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false
+        }}>
+        <Stack.Screen
+          name="WelcomeScreen"
+          component={WelcomeScreen}
+        />
+        <Stack.Screen name="MainScreen" component={MainScreen}/>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
