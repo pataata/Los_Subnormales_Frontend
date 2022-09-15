@@ -21,8 +21,8 @@ function Results({navigation}) {
               underlayColor = '#ccc'
               onPress = { () => alert('Yaay!') }
             >
-              <Text>Mom, look, I am a circle!</Text>
-              {/*<Text> title="Todo parece estar bien con tu vuelo", style={styles.item} </Text>*/}
+              <Text>Todo parece estar bien</Text>
+              {/*<Text> title="Todo parece estar bien", style={styles.item} </Text>*/}
             </TouchableHighlight>
         </Screen>
     );
