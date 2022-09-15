@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Text, StyleSheet, View, Dimensions, TouchableHighlight} from "react-native";
+import {Button, Text, StyleSheet, View, Dimensions, Animated} from "react-native";
 import AppButton from '../components/AppButton';
 import Screen from '../components/Screen';
 import colors from '../config/colors';
@@ -9,9 +9,12 @@ function Results({navigation}) {
     return (
         <Screen style={styles.background}>
             <Button title="< Regresar" onPress={() => navigation.navigate('MainScreen')}/>
+            <View style={styles.space} />
             <View style = {styles.circle}>
-              <Text style={styles.item}> Todo parece estar en orden </Text>
+              <Text style={styles.buttontext}> Todo parece estar </Text>
+              <Text style={styles.buttontext}> en orden </Text>
             </View>
+            <View style={styles.space} />
         </Screen>
     );
 }
@@ -21,7 +24,7 @@ const styles = StyleSheet.create({
         padding: 10,
 		backgroundColor: colors.background,
         justifyContent: "center",
-        alignItems: 'center',
+        alignItems: 'center', 
         flex: 1
     },
     circle: {
@@ -30,11 +33,16 @@ const styles = StyleSheet.create({
         height: 350,
         backgroundColor: colors.text,
         justifyContent: "center",
+        alignSelf: 'center',
         padding : 10
     },
-    item: {
+    buttontext: {
         fontSize: 28,
-		color: colors.background3
+		color: colors.background3,
+        alignSelf: "center"
+    },
+    space: {
+        flex: 2
     }
 });
 
