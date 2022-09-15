@@ -19,7 +19,6 @@ function Results({navigation}) {
                 alignItems: 'center'
               }}
               underlayColor = '#ccc'
-              onPress = { () => alert('Yaay!') }
             >
               <Text>Todo parece estar bien</Text>
               {/*<Text> title="Todo parece estar bien", style={styles.item} </Text>*/}
