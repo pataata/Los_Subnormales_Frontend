@@ -8,14 +8,12 @@ export default{
     espacial: '#6699FF',
     danger: '#ff5252',
     dark: '#0c0c0c',
-<<<<<<< Updated upstream
-    background: '#121212',
-=======
+
     background: '#1E1E33',
     background2: 'rgba(105, 134, 255, 0.61)',
-    backgroundtransparent: 'rgba(30, 30, 51, 0.9)',
+    backgroundtransparent: 'rgba(30, 30, 51, .95)',
     background3: 'rgba(105, 238, 143, 0.60)',
->>>>>>> Stashed changes
+
     text: '#fff',
     espacial: '#6699FF'
 }

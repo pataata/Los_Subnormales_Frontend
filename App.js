@@ -1,11 +1,12 @@
 import React, { Component} from 'react';
-import ScreenOne from './app/screens/ScreenOneAndTwo';
-import ScreenTwo from './app/screens/ScreenOneAndTwo';
 
 //Navigation import
 import {NavigationContainer} from '@react-navigation/native';
-import {createStackNavigator} from '@react-navigation/stack';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import WelcomeScreen from './app/screens/WelcomeScreen';
+import MainScreen from './app/screens/MainScreen';
 
+const Stack = createNativeStackNavigator();
 
 const Data = {"Age": 50}
 
@@ -14,20 +15,7 @@ function makeFecth(){
 }
 
 const App = () => {
-<<<<<<< Updated upstream
-	//const
-	const Stack = createStackNavigator();
-  
-	return (
-	  <NavigationContainer>
-		<Stack.Navigator>
-		  <Stack.Screen name="Spaceship Titanic" component={ScreenOne} />
-		  <Stack.Screen name="Prediction Model" component={ScreenTwo} />
-		</Stack.Navigator>
-	  </NavigationContainer>
-	);
-  };
-=======
+
   makeFecth();
 
   return (
@@ -45,6 +33,5 @@ const App = () => {
     </NavigationContainer>
   );
 };
->>>>>>> Stashed changes
 
 export default App;

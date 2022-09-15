@@ -8,12 +8,10 @@
       "name": "subnormales-front",
       "version": "1.0.0",
       "dependencies": {
-<<<<<<< Updated upstream
-=======
         "@react-native-community/checkbox": "^0.5.12",
         "@react-native-community/slider": "^4.3.1",
->>>>>>> Stashed changes
         "@react-navigation/native": "^6.0.12",
+        "@react-navigation/native-stack": "^6.8.0",
         "@react-navigation/stack": "^6.2.3",
         "expo": "~46.0.9",
         "expo-checkbox": "~2.2.0",
@@ -4337,6 +4335,12 @@
         "node": ">=8"
       }
     },
+    "node_modules/@react-native-community/slider": {
+      "version": "4.3.1",
+      "resolved": "https://registry.npmjs.org/@react-native-community/slider/-/slider-4.3.1.tgz",
+      "integrity": "sha512-1UOKwABK+F2+Vzj7pI3UjRzWXrjI7yNECW/JNvfIXdpaS2/Vf/YH3XEszpG+8ZueEPSxNK2S271NGEWlheaExg==",
+      "hasInstallScript": true
+    },
     "node_modules/@react-native/assets": {
       "version": "1.0.0",
       "resolved": "https://registry.npmjs.org/@react-native/assets/-/assets-1.0.0.tgz",
@@ -4408,6 +4412,22 @@
       "peerDependencies": {
         "react": "*",
         "react-native": "*"
+      }
+    },
+    "node_modules/@react-navigation/native-stack": {
+      "version": "6.8.0",
+      "resolved": "https://registry.npmjs.org/@react-navigation/native-stack/-/native-stack-6.8.0.tgz",
+      "integrity": "sha512-OhyyuSoIcY32kYNnTI0VUDcp2JT1jgFuT6j8FiUI/lPttcQKLVBS+jzRtHzpJ2D8N0CEjTLCyQNkVJBTpwjNFg==",
+      "dependencies": {
+        "@react-navigation/elements": "^1.3.5",
+        "warn-once": "^0.1.0"
+      },
+      "peerDependencies": {
+        "@react-navigation/native": "^6.0.0",
+        "react": "*",
+        "react-native": "*",
+        "react-native-safe-area-context": ">= 3.0.0",
+        "react-native-screens": ">= 3.0.0"
       }
     },
     "node_modules/@react-navigation/native/node_modules/escape-string-regexp": {
@@ -15823,6 +15843,11 @@
         "joi": "^17.2.1"
       }
     },
+    "@react-native-community/slider": {
+      "version": "4.3.1",
+      "resolved": "https://registry.npmjs.org/@react-native-community/slider/-/slider-4.3.1.tgz",
+      "integrity": "sha512-1UOKwABK+F2+Vzj7pI3UjRzWXrjI7yNECW/JNvfIXdpaS2/Vf/YH3XEszpG+8ZueEPSxNK2S271NGEWlheaExg=="
+    },
     "@react-native/assets": {
       "version": "1.0.0",
       "resolved": "https://registry.npmjs.org/@react-native/assets/-/assets-1.0.0.tgz",
@@ -15885,6 +15910,15 @@
           "resolved": "https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-4.0.0.tgz",
           "integrity": "sha512-TtpcNJ3XAzx3Gq8sWRzJaVajRs0uVxA2YAkdb1jm2YkPz4G6egUFAyA3n5vtEIZefPk5Wa4UXbKuS5fKkJWdgA=="
         }
+      }
+    },
+    "@react-navigation/native-stack": {
+      "version": "6.8.0",
+      "resolved": "https://registry.npmjs.org/@react-navigation/native-stack/-/native-stack-6.8.0.tgz",
+      "integrity": "sha512-OhyyuSoIcY32kYNnTI0VUDcp2JT1jgFuT6j8FiUI/lPttcQKLVBS+jzRtHzpJ2D8N0CEjTLCyQNkVJBTpwjNFg==",
+      "requires": {
+        "@react-navigation/elements": "^1.3.5",
+        "warn-once": "^0.1.0"
       }
     },
     "@react-navigation/routers": {
