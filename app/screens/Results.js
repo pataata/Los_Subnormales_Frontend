@@ -21,7 +21,8 @@ function Results({navigation}) {
               underlayColor = '#ccc'
               onPress = { () => alert('Yaay!') }
             >
-              <Text title="Mom, look, I am a circle!" style={styles.item} />
+              <Text>Mom, look, I am a circle!</Text>
+              {/*<Text> title="Todo parece estar bien con tu vuelo", style={styles.item} </Text>*/}
             </TouchableHighlight>
         </Screen>
     );
@@ -40,7 +41,6 @@ const styles = StyleSheet.create({
     item: {
 		color: colors.background3
     }
-
 });
 
 export default Results;

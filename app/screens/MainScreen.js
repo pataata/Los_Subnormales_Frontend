@@ -100,8 +100,7 @@ function MainScreen({ navigation }) {
 				}
       		/>
 			<Text
-				style={styles.result}>	
-				Hola
+				style={styles.result}>
 			</Text>
 
 			<AppButton 
