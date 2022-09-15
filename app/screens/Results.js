@@ -6,9 +6,9 @@ import colors from '../config/colors';
 
 
 function Results({navigation, route}) {
-    const mensaje = 'Lo sentimos, parece que viajaras a otra dimension alterna fría y sin nadie.'
+    var mensaje = 'Lo sentimos, parece que viajaras a otra dimension alterna fría y sin nadie.'
 
-    if(route.params.resultado === 0){
+    if(route.params.resultado === '0'){
         mensaje = 'Felicidades, no viajas a nuestra dimension'
     }
 

@@ -3,7 +3,6 @@ import { Button,Image, StyleSheet, Text, View } from "react-native";
 import * as Yup from "yup";
 
 import Screen from "../components/Screen";
-import { AppForm, AppFormField, SubmitButton } from "../components/forms/index";
 import AppButton from "../components/AppButton";
 import colors from "../config/colors";
 import { FlatList, Switch, TextInput } from "react-native-gesture-handler";
@@ -15,7 +14,7 @@ import ModalDropdown from "react-native-modal-dropdown";
 
 function MainScreen({ navigation }) {
 	function enviarDatos(datos){
-		fetch('http://10.0.0.14:8080/test', {
+		fetch('http://10.0.0.14:8080/sendData', {
 		  method: 'POST',
 		  headers: {
 			Accept: 'application/json',
