@@ -14,7 +14,7 @@ import ModalDropdown from "react-native-modal-dropdown";
 
 function MainScreen({ navigation }) {
 	function enviarDatos(datos){
-		fetch('http://10.0.0.14:8080/sendData', {
+		fetch('http://35.174.116.152:8080/sendData', {
 		  method: 'POST',
 		  headers: {
 			Accept: 'application/json',
