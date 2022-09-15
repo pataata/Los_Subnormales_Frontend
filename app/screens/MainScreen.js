@@ -14,14 +14,15 @@ import ModalDropdown from "react-native-modal-dropdown";
 
 
 function MainScreen({ navigation }) {
-	function enviarDatos(){
-		fetch('http://10.0.0.14:8080/sendData', {
+	function enviarDatos(datos){
+		fetch('http://10.0.0.14:8080/test', {
 		  method: 'POST',
 		  headers: {
 			Accept: 'application/json',
 			'Content-Type': 'application/json',
 		  },
-		  body: JSON.stringify({
+		  body: JSON.stringify(datos
+			/*{
 			CryoSleep: 1,
 			RoomService: 23,
 			Spa: 123,
@@ -46,8 +47,8 @@ function MainScreen({ navigation }) {
 			HomePlanet_Mars: 1,
 			'01': 1,
 			'08': 2,
-			constant: 3
-		  }),
+			constant: 3}*/
+		  ),
 		})
 		  .then((response) => response.json())
 		  .then((responseJson) => {
@@ -231,12 +232,12 @@ function MainScreen({ navigation }) {
 
 			<AppButton 
 				style={styles.button}
-				title="Calcular"
+				title="Enviar"
 				onPress={() => {
 					//navigation.navigate('Results')
 					
 				
-					console.log(
+					var datos =
 						{
 							'RoomService': RoomService,
 							'CryoSleep': CryoSleep,
@@ -251,9 +252,10 @@ function MainScreen({ navigation }) {
 							'ShoppingMall': ShoppingMall,
 							'Destination': Destination,
 							'GroupID': GroupId
-						})
+						}
+					console.log(datos)
 					
-					enviarDatos()
+					enviarDatos(datos)
 				}}/>
 		</Screen>
 	);
@@ -274,7 +276,7 @@ const styles = StyleSheet.create({
 		width: 120,
 		height: 120,
 		alignSelf: "center",
-		marginTop: 30,
+		marginTop: 20,
 		marginBottom: 20,
 	},
 
