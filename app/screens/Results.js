@@ -9,20 +9,9 @@ function Results({navigation}) {
     return (
         <Screen style={styles.background}>
             <Button title="< Regresar" onPress={() => navigation.navigate('MainScreen')}/>
-            <TouchableHighlight 
-            style = {{
-                borderRadius: Math.round(Dimensions.get('window').width + Dimensions.get('window').height) / 2,
-                width: Dimensions.get('window').width * 0.7,
-                height: Dimensions.get('window').width * 0.7,
-                backgroundColor: colors.text,
-                justifyContent: 'center',
-                alignItems: 'center'
-              }}
-              underlayColor = '#ccc'
-            >
-              <Text>Todo parece estar bien</Text>
-              {/*<Text> title="Todo parece estar bien", style={styles.item} </Text>*/}
-            </TouchableHighlight>
+            <View style = {styles.circle}>
+              <Text style={styles.item}> Todo parece estar en orden </Text>
+            </View>
         </Screen>
     );
 }
@@ -30,14 +19,21 @@ function Results({navigation}) {
 const styles = StyleSheet.create({
     background:{
         padding: 10,
-		backgroundColor: colors.background
+		backgroundColor: colors.background,
+        justifyContent: "center",
+        alignItems: 'center',
+        flex: 1
     },
     circle: {
-        width: 44,
-        height: 44,
-        borderRadius: 44/2
+        borderRadius: Math.round(Dimensions.get('window').width + Dimensions.get('window').height),
+        width: 350,
+        height: 350,
+        backgroundColor: colors.text,
+        justifyContent: "center",
+        padding : 10
     },
     item: {
+        fontSize: 28,
 		color: colors.background3
     }
 });
