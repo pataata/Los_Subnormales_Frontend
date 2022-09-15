@@ -7,7 +7,14 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
 
+const Data = {"Age": 50}
+
+function makeFecth(){
+  console.log('resultado')
+}
+
 const App = () => {
+<<<<<<< Updated upstream
 	//const
 	const Stack = createStackNavigator();
   
@@ -20,5 +27,24 @@ const App = () => {
 	  </NavigationContainer>
 	);
   };
+=======
+  makeFecth();
+
+  return (
+    <NavigationContainer>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false
+        }}>
+        <Stack.Screen
+          name="WelcomeScreen"
+          component={WelcomeScreen}
+        />
+        <Stack.Screen name="MainScreen" component={MainScreen}/>
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
+>>>>>>> Stashed changes
 
 export default App;
