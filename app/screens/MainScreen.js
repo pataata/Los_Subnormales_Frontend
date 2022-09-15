@@ -107,7 +107,7 @@ function MainScreen({ navigation }) {
 			<AppButton 
 				style={styles.button}
 				title="Calcular"
-				onPress={() => navigation.navigate('WelcomeScreen')}/>
+				onPress={() => navigation.navigate('Results')}/>
 		</Screen>
 	);
 }
