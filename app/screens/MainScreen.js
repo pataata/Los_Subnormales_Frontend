@@ -14,6 +14,55 @@ import ModalDropdown from "react-native-modal-dropdown";
 
 
 function MainScreen({ navigation }) {
+	function enviarDatos(){
+		fetch('http://10.0.0.14:8080/sendData', {
+		  method: 'POST',
+		  headers: {
+			Accept: 'application/json',
+			'Content-Type': 'application/json',
+		  },
+		  body: JSON.stringify({
+			CryoSleep: 1,
+			RoomService: 23,
+			Spa: 123,
+			VRDeck: 20,
+			VIP: 1,
+			FoodCourt: 30,
+			C: 0,
+			D: 1,
+			E: 0,
+			B: 0,
+			T: 0,
+			HomePlanet_Europa: 1,
+			Age: 20,
+			TotalBill: 209,
+			S: 1,
+			ShoppingMall: 1,
+			Destination_55Cancrie: 0,
+			'Destination_PSOJ318.5-22': 1,
+			'Destination_TRAPPIST-1e': 0,
+			A: 0,
+			HomePlanet_Earth: 0,
+			HomePlanet_Mars: 1,
+			'01': 1,
+			'08': 2,
+			constant: 3
+		  }),
+		})
+		  .then((response) => response.json())
+		  .then((responseJson) => {
+			//Showing response message coming from server 
+			console.log(responseJson);
+			navigation.navigate('Results', { resultado: responseJson.resultado })
+		  })
+		  .catch((error) => {
+		  //display error message
+		   console.log(error);
+		   navigation.navigate('Results', { resultado: -1 })
+		  });
+		
+	}
+
 	const defaultValues = {'Room Service': '100', 'CryoSleep': true, 'Spa':150,'VR Deck': '50', 'VIP': false, 'Food Court': '150', 'Cabin': 'D',
 							'Age':30,'Home Planet':'Earth','Side':'Port','Shopping Mall':'40','Destination':'55 Cancrie','Group ID':'08'}
 
@@ -185,6 +234,7 @@ function MainScreen({ navigation }) {
 				title="Calcular"
 				onPress={() => {
 					//navigation.navigate('Results')
+					
 				
 					console.log(
 						{
@@ -201,8 +251,9 @@ function MainScreen({ navigation }) {
 							'ShoppingMall': ShoppingMall,
 							'Destination': Destination,
 							'GroupID': GroupId
-						}
-					)
+						})
+					
+					enviarDatos()
 				}}/>
 		</Screen>
 	);

@@ -5,14 +5,19 @@ import Screen from '../components/Screen';
 import colors from '../config/colors';
 
 
-function Results({navigation}) {
+function Results({navigation, route}) {
+    const mensaje = 'Lo sentimos, parece que viajaras a otra dimension alterna, fría y sin nadie.'
+
+    if(route.params.resultado === 0)
+        mensaje = 'Felicidades, no viajas a nuestra dimension'
+
+
     return (
         <Screen style={styles.background}>
             <Button title="< Regresar" onPress={() => navigation.navigate('MainScreen')}/>
             <View style={styles.space} />
             <View style = {styles.circle}>
-              <Text style={styles.buttontext}> Todo parece estar </Text>
-              <Text style={styles.buttontext}> en orden </Text>
+              <Text style={styles.buttontext}> {mensaje} </Text>
             </View>
             <View style={styles.space} />
         </Screen>
@@ -34,12 +39,14 @@ const styles = StyleSheet.create({
         backgroundColor: colors.text,
         justifyContent: "center",
         alignSelf: 'center',
-        padding : 10
+        padding : 15
     },
     buttontext: {
         fontSize: 28,
-		color: colors.background3,
-        alignSelf: "center"
+		color: colors.black,
+        fontWeight: 'bold',
+        alignSelf: "center",
+        textAlign: 'center'
     },
     space: {
         flex: 2
