@@ -3,6 +3,7 @@ import {Button, Text, StyleSheet, View, Dimensions, Animated} from "react-native
 import AppButton from '../components/AppButton';
 import Screen from '../components/Screen';
 import colors from '../config/colors';
+import * as Animatable from 'react-native-animatable';
 
 
 function Results({navigation, route}) {
@@ -18,9 +19,11 @@ function Results({navigation, route}) {
         <Screen style={styles.background}>
             <Button title="< Regresar" onPress={() => navigation.navigate('MainScreen')}/>
             <View style={styles.space} />
-            <View style = {colorcirculo}>
-              <Text style={styles.buttontext}> {mensaje} </Text>
-            </View>
+            <Animatable.View animation='bounceIn' style={styles.container} duration={3000}>
+                <View style = {colorcirculo}>
+                <Text style={styles.buttontext}> {mensaje} </Text>
+                </View>
+            </Animatable.View>
             <View style={styles.space} />
         </Screen>
     );
