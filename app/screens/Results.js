@@ -1,5 +1,5 @@
 import React from 'react';
-import {Button, Text, StyleSheet} from "react-native";
+import {Button, Text, StyleSheet, View, Dimensions, TouchableHighlight} from "react-native";
 import AppButton from '../components/AppButton';
 import Screen from '../components/Screen';
 import colors from '../config/colors';
@@ -9,7 +9,20 @@ function Results({navigation}) {
     return (
         <Screen style={styles.background}>
             <Button title="< Regresar" onPress={() => navigation.navigate('MainScreen')}/>
-            <AppButton title="boton que no hace nada"></AppButton>
+            <TouchableHighlight 
+            style = {{
+                borderRadius: Math.round(Dimensions.get('window').width + Dimensions.get('window').height) / 2,
+                width: Dimensions.get('window').width * 0.7,
+                height: Dimensions.get('window').width * 0.7,
+                backgroundColor: colors.text,
+                justifyContent: 'center',
+                alignItems: 'center'
+              }}
+              underlayColor = '#ccc'
+              onPress = { () => alert('Yaay!') }
+            >
+              <Text> Mom, look, I am a circle! </Text>
+            </TouchableHighlight>
         </Screen>
     );
 }
@@ -18,7 +31,12 @@ const styles = StyleSheet.create({
     background:{
         padding: 10,
 		backgroundColor: colors.background
-    }
+    },
+    circle: {
+        width: 44,
+        height: 44,
+        borderRadius: 44/2
+     }
 })
 
 export default Results;
